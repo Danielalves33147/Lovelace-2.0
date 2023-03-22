@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./static/css/style.css">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkando as Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Lovelace - Hora de praticar!</title>
+</head>
+<body>
+    <header>
+        <h1><span id="love">Lovelace</span></h1>
+    </header>
+ 
+    <div class="container">
+        <h3 id="timer">00:00:00</h3>
+    </div>
+
+    <section id="textContainer">
+        <div id="containerContent">
+            
+        </div>
+
+        <input id="submitAnswer" type="text" placeholder="As palavras chave do texto são..." required>
+        
+        <div class="answerButtons">
+            <button class="sendAnswer" onclick="sendAnswers()">Enviar resposta</button>
+            <button class="changeText" onclick="changeText(practiceText)">Mudar texto</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por <span>Daniel de Santana</span>,<span> Marcos Emanuel </span> e <span> Melkysedeke Costa</span>.</p>
+        <span class="divider"></span>
+        <p>Orientado pela <span>Prof. Dr. Lenade Barreto</span>.</p>
+    </footer>
+
+    <section id="resultContainer">
+        <div class="modal">
+            <h1>Resultado</h1>
+
+            <div id="scoreContainer">
+                <h2 id="scoreTitle"><span id="score"></span>/100</h2>
+            </div>
+
+            <p class="usuario">Usuario: <span id="login"></span></p>
+
+            <p class="modalParagraph">Seu nível:  <span id="level"></span> </p>
+
+            <p class="Text">Texto Lido:  <span id="txt"></span> </p>
+
+            <p class="temp">Tempo:  <span id="time"></span> </p>
+
+            
+            <footer id="foot" style="margin-top: 70px;" >
+                <p>Desenvolvido por <span>Daniel de Santana</span>,<span> Marcos Emanuel </span> e <span> Melkysedeke Costa</span>.</p>
+                <span class="divider"></span>
+                <p>Orientado pela <span>Prof. Dr. Lenade Barreto</span>.</p>
+            </footer>
+
+            <p class="paragraphmodal">Deseja salvar o resultado em um PDF?</p>
+
+            <div id="resultButtons">
+                <button id="save" onclick="">Quero!</button>
+                <button id="dontSavePdf" onclick="">Não quero</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+            });
+    </script>
+</body>
+</html>

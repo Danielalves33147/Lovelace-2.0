@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Linkando o CSS -->
+    <link rel="stylesheet" href="./static/css/stylelogin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linkando as fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Lovelace</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <img src="./static/img/ada.svg" class="left-login-image" alt="Leitoraanimação"> 
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Faça Login</h1>
+                <form method="post" action="/login">
+                <div class="textfield">
+                    <label for="usuario"></label>
+                    <input name="email" type="email" placeholder="Usuario" id="login" required>
+
+                    <label for="senha"></label>
+                    <input name="senha" type="password" placeholder="Senha" id="senha" required>
+                </div>
+                    <div class="btn">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+                <div class="btn">
+
+                    <button id="btnCads" onclick="window.location.href='/register'">Cadastro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
